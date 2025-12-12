@@ -11,57 +11,143 @@
             box-sizing: border-box;
         }
         
+        :root {
+            --bg-gradient-start: #667eea;
+            --bg-gradient-end: #764ba2;
+            --container-bg: white;
+            --text-primary: #333;
+            --text-secondary: #666;
+            --border-color: #e0e0e0;
+            --chat-bg: #f9f9f9;
+            --user-msg-bg: #667eea;
+            --bot-msg-bg: #e8eaf6;
+            --recommendation-bg: #e8f5e9;
+            --warning-bg: #fff3cd;
+            --warning-border: #ffc107;
+            --warning-text: #856404;
+            --button-hover: #5568d3;
+            --examples-bg: #f5f5f5;
+        }
+        
+        [data-theme="dark"] {
+            --bg-gradient-start: #1a1a2e;
+            --bg-gradient-end: #16213e;
+            --container-bg: #0f3460;
+            --text-primary: #e8e8e8;
+            --text-secondary: #b8b8b8;
+            --border-color: #2a2a3e;
+            --chat-bg: #1a1a2e;
+            --user-msg-bg: #533483;
+            --bot-msg-bg: #2a2a3e;
+            --recommendation-bg: #1e4620;
+            --warning-bg: #3d3315;
+            --warning-border: #ffc107;
+            --warning-text: #ffd54f;
+            --button-hover: #6a4c93;
+            --examples-bg: #2a2a3e;
+        }
+        
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 20px;
+            transition: background 0.3s ease;
         }
         
         .container {
-            background: white;
+            background: var(--container-bg);
             border-radius: 20px;
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
             max-width: 600px;
             width: 100%;
             padding: 30px;
+            transition: background 0.3s ease;
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
         }
         
         h1 {
             color: #667eea;
-            text-align: center;
-            margin-bottom: 10px;
             font-size: 28px;
+        }
+        
+        .controls {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        
+        .icon-button {
+            background: transparent;
+            border: 2px solid var(--border-color);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            padding: 0;
+        }
+        
+        .icon-button:hover {
+            background: var(--bot-msg-bg);
+            transform: scale(1.1);
+        }
+        
+        .language-select {
+            padding: 8px 12px;
+            border: 2px solid var(--border-color);
+            border-radius: 20px;
+            background: var(--container-bg);
+            color: var(--text-primary);
+            font-size: 14px;
+            cursor: pointer;
+            outline: none;
+            transition: all 0.3s;
+        }
+        
+        .language-select:hover {
+            border-color: #667eea;
         }
         
         .subtitle {
             text-align: center;
-            color: #666;
+            color: var(--text-secondary);
             margin-bottom: 30px;
             font-size: 14px;
         }
         
         .warning {
-            background: #fff3cd;
-            border-left: 4px solid #ffc107;
+            background: var(--warning-bg);
+            border-left: 4px solid var(--warning-border);
             padding: 12px;
             margin-bottom: 20px;
             border-radius: 5px;
             font-size: 13px;
-            color: #856404;
+            color: var(--warning-text);
         }
         
         .chat-container {
             height: 300px;
             overflow-y: auto;
-            border: 1px solid #e0e0e0;
+            border: 1px solid var(--border-color);
             border-radius: 10px;
             padding: 15px;
             margin-bottom: 20px;
-            background: #f9f9f9;
+            background: var(--chat-bg);
+            transition: all 0.3s ease;
         }
         
         .message {
@@ -77,20 +163,20 @@
         }
         
         .user-message {
-            background: #667eea;
+            background: var(--user-msg-bg);
             color: white;
             margin-left: 50px;
             text-align: right;
         }
         
         .bot-message {
-            background: #e8eaf6;
-            color: #333;
+            background: var(--bot-msg-bg);
+            color: var(--text-primary);
             margin-right: 50px;
         }
         
         .recommendation {
-            background: #e8f5e9;
+            background: var(--recommendation-bg);
             border-left: 4px solid #4caf50;
             padding: 15px;
             margin: 10px 0;
@@ -103,35 +189,37 @@
             font-size: 16px;
         }
         
+        [data-theme="dark"] .recommendation h3 {
+            color: #66bb6a;
+        }
+        
         .recommendation p {
             margin: 5px 0;
             font-size: 14px;
+            color: var(--text-primary);
         }
         
-        .medicine {
-            color: #1565c0;
-            font-weight: bold;
-        }
-        
-        .advice {
-            color: #555;
-            font-style: italic;
-            margin-top: 8px;
+        .recommendation ul {
+            margin-left: 20px;
+            color: var(--text-primary);
         }
         
         .input-container {
             display: flex;
             gap: 10px;
+            margin-bottom: 10px;
         }
         
         #symptomInput {
             flex: 1;
             padding: 15px;
-            border: 2px solid #e0e0e0;
+            border: 2px solid var(--border-color);
             border-radius: 25px;
             font-size: 14px;
             outline: none;
             transition: border-color 0.3s;
+            background: var(--container-bg);
+            color: var(--text-primary);
         }
         
         #symptomInput:focus {
@@ -147,22 +235,44 @@
             font-size: 14px;
             font-weight: bold;
             cursor: pointer;
-            transition: background 0.3s;
+            transition: all 0.3s;
         }
         
         button:hover {
-            background: #5568d3;
+            background: var(--button-hover);
         }
         
         button:active {
             transform: scale(0.98);
         }
         
+        .voice-button {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+        
+        .voice-button.recording {
+            background: #f44336;
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        
         .examples {
             margin-top: 15px;
             padding: 15px;
-            background: #f5f5f5;
+            background: var(--examples-bg);
             border-radius: 10px;
+            transition: background 0.3s ease;
         }
         
         .examples h4 {
@@ -174,7 +284,7 @@
         .examples ul {
             list-style: none;
             font-size: 13px;
-            color: #666;
+            color: var(--text-secondary);
         }
         
         .examples li {
@@ -186,25 +296,75 @@
         .examples li:hover {
             color: #667eea;
         }
+        
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .small-button {
+            padding: 8px 16px;
+            font-size: 12px;
+            border-radius: 15px;
+        }
+        
+        /* Scrollbar styling */
+        .chat-container::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        .chat-container::-webkit-scrollbar-track {
+            background: var(--border-color);
+            border-radius: 10px;
+        }
+        
+        .chat-container::-webkit-scrollbar-thumb {
+            background: #667eea;
+            border-radius: 10px;
+        }
+        
+        .chat-container::-webkit-scrollbar-thumb:hover {
+            background: var(--button-hover);
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>🏥 Medical Chatbot</h1>
-        <p class="subtitle">Describe your symptoms and get medicine recommendations</p>
+        <div class="header">
+            <h1>🏥 Medical Chatbot</h1>
+            <div class="controls">
+                <select class="language-select" id="languageSelect" onchange="changeLanguage()">
+                    <option value="en">English</option>
+                    <option value="fr">Français</option>
+                    <option value="ar">العربية</option>
+                    <option value="darija">الدارجة</option>
+                </select>
+                <button class="icon-button" onclick="toggleTheme()" title="Toggle Dark Mode">
+                    <span id="themeIcon">🌙</span>
+                </button>
+                <button class="icon-button" onclick="clearChat()" title="Clear Chat">
+                    🗑️
+                </button>
+            </div>
+        </div>
+        <p class="subtitle" id="subtitle">Describe your symptoms and get medicine recommendations</p>
         
         <div class="warning">
             ⚠️ <strong>Disclaimer:</strong> This is for informational purposes only. Always consult a healthcare professional for proper medical advice.
         </div>
         
         <div class="chat-container" id="chatContainer">
-            <div class="message bot-message">
+            <div class="message bot-message" id="greetingMessage">
                 Hello! I'm your medical assistant. Please describe your symptoms, and I'll recommend appropriate medicine. 
             </div>
         </div>
         
         <div class="input-container">
             <input type="text" id="symptomInput" placeholder="e.g., I have fever and headache..." />
+            <button class="voice-button" id="voiceButton" onclick="toggleVoiceInput()" title="Voice Input">
+                🎤
+            </button>
             <button onclick="sendSymptoms()">Send</button>
         </div>
         
@@ -221,12 +381,112 @@
     <script>
         const chatContainer = document.getElementById('chatContainer');
         const symptomInput = document.getElementById('symptomInput');
+        const voiceButton = document.getElementById('voiceButton');
+        let currentLanguage = 'en';
+        let recognition;
+        let isRecording = false;
+        
+        // Initialize speech recognition
+        if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+            const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+            recognition = new SpeechRecognition();
+            recognition.continuous = false;
+            recognition.interimResults = false;
+            
+            recognition.onresult = function(event) {
+                const transcript = event.results[0][0].transcript;
+                symptomInput.value = transcript;
+                isRecording = false;
+                voiceButton.classList.remove('recording');
+                voiceButton.innerHTML = '🎤';
+            };
+            
+            recognition.onerror = function(event) {
+                console.error('Speech recognition error:', event.error);
+                isRecording = false;
+                voiceButton.classList.remove('recording');
+                voiceButton.innerHTML = '🎤';
+                alert('Voice recognition error. Please try again.');
+            };
+            
+            recognition.onend = function() {
+                isRecording = false;
+                voiceButton.classList.remove('recording');
+                voiceButton.innerHTML = '🎤';
+            };
+        } else {
+            voiceButton.style.display = 'none';
+        }
+        
+        // Load theme preference
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        if (savedTheme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            document.getElementById('themeIcon').textContent = '☀️';
+        }
         
         symptomInput.addEventListener('keypress', function(e) {
             if (e.key === 'Enter') {
                 sendSymptoms();
             }
         });
+        
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            document.getElementById('themeIcon').textContent = newTheme === 'dark' ? '☀️' : '🌙';
+            localStorage.setItem('theme', newTheme);
+        }
+        
+        function toggleVoiceInput() {
+            if (!recognition) {
+                alert('Voice recognition is not supported in your browser.');
+                return;
+            }
+            
+            if (isRecording) {
+                recognition.stop();
+                isRecording = false;
+                voiceButton.classList.remove('recording');
+                voiceButton.innerHTML = '🎤';
+            } else {
+                recognition.lang = getVoiceLanguageCode();
+                recognition.start();
+                isRecording = true;
+                voiceButton.classList.add('recording');
+                voiceButton.innerHTML = '⏹️';
+            }
+        }
+        
+        function getVoiceLanguageCode() {
+            const langMap = {
+                'en': 'en-US',
+                'fr': 'fr-FR',
+                'ar': 'ar-SA',
+                'darija': 'ar-MA'
+            };
+            return langMap[currentLanguage] || 'en-US';
+        }
+        
+        async function changeLanguage() {
+            currentLanguage = document.getElementById('languageSelect').value;
+            
+            // Update greeting message
+            try {
+                const response = await fetch('/get_translation', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ language: currentLanguage, key: 'greeting' })
+                });
+                const data = await response.json();
+                document.getElementById('greetingMessage').textContent = data.translation;
+            } catch (error) {
+                console.error('Error fetching translation:', error);
+            }
+        }
         
         function fillExample(text) {
             symptomInput.value = text;
@@ -241,46 +501,38 @@
             chatContainer.scrollTop = chatContainer.scrollHeight;
         }
         
-
-
-
         function addRecommendation(rec) {
-    const recDiv = document.createElement('div');
-    recDiv.className = 'message bot-message';
+            const recDiv = document.createElement('div');
+            recDiv.className = 'message bot-message';
 
-    recDiv.innerHTML = `
-        <div class="recommendation">
-            <h3>📋 ${rec.condition}</h3>
+            recDiv.innerHTML = `
+                <div class="recommendation">
+                    <h3>📋 ${rec.condition}</h3>
 
-            <p><strong>ℹ️ Description:</strong> ${rec.description}</p>
-            <p><strong>🔎 Severity:</strong> ${rec.severity}</p>
+                    <p><strong>ℹ️ Description:</strong> ${rec.description}</p>
+                    <p><strong>🔎 Severity:</strong> ${rec.severity}</p>
 
-            <p><strong>💊 Medicines:</strong></p>
-            <ul>${rec.medicines.map(m => `<li>${m}</li>`).join("")}</ul>
+                    <p><strong>💊 Medicines:</strong></p>
+                    <ul>${rec.medicines.map(m => `<li>${m}</li>`).join("")}</ul>
 
-            <p><strong>💡 Advice:</strong></p>
-            <ul>${rec.advices.map(a => `<li>${a}</li>`).join("")}</ul>
+                    <p><strong>💡 Advice:</strong></p>
+                    <ul>${rec.advices.map(a => `<li>${a}</li>`).join("")}</ul>
 
-            <p><strong>🏠 Home Remedies:</strong></p>
-            <ul>${rec.home_remedies.map(h => `<li>${h}</li>`).join("")}</ul>
+                    <p><strong>🏠 Home Remedies:</strong></p>
+                    <ul>${rec.home_remedies.map(h => `<li>${h}</li>`).join("")}</ul>
 
-            <p><strong>🛡️ Prevention:</strong></p>
-            <ul>${rec.prevention.map(p => `<li>${p}</li>`).join("")}</ul>
+                    <p><strong>🛡️ Prevention:</strong></p>
+                    <ul>${rec.prevention.map(p => `<li>${p}</li>`).join("")}</ul>
 
-            <p><strong>⚠️ When to See a Doctor:</strong></p>
-            <ul>${rec.when_to_see_doctor.map(w => `<li>${w}</li>`).join("")}</ul>
-        </div>
-    `;
+                    <p><strong>⚠️ When to See a Doctor:</strong></p>
+                    <ul>${rec.when_to_see_doctor.map(w => `<li>${w}</li>`).join("")}</ul>
+                </div>
+            `;
 
-    chatContainer.appendChild(recDiv);
-    chatContainer.scrollTop = chatContainer.scrollHeight;
-}
-
+            chatContainer.appendChild(recDiv);
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+        }
         
-
-
-
-
         async function sendSymptoms() {
             const symptoms = symptomInput.value.trim();
             
@@ -298,14 +550,17 @@
                     headers: {
                         'Content-Type': 'application/json',
                     },
-                    body: JSON.stringify({ symptoms: symptoms })
+                    body: JSON.stringify({ 
+                        symptoms: symptoms,
+                        language: currentLanguage 
+                    })
                 });
                 
                 const data = await response.json();
                 
                 if (data.success) {
                     if (data.recommendations.length > 0) {
-                        addMessage(`I found ${data.recommendations.length} recommendation(s) for you:`, false);
+                        addMessage(data.message, false);
                         data.recommendations.forEach(rec => addRecommendation(rec));
                     }
                 } else {
@@ -316,6 +571,59 @@
                 console.error('Error:', error);
             }
         }
+        
+        async function clearChat() {
+            if (confirm('Are you sure you want to clear the chat history?')) {
+                try {
+                    await fetch('/clear_history', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        }
+                    });
+                    
+                    // Clear chat container but keep greeting
+                    chatContainer.innerHTML = '';
+                    const greetingDiv = document.createElement('div');
+                    greetingDiv.className = 'message bot-message';
+                    greetingDiv.id = 'greetingMessage';
+                    greetingDiv.textContent = 'Hello! I\'m your medical assistant. Please describe your symptoms, and I\'ll recommend appropriate medicine.';
+                    chatContainer.appendChild(greetingDiv);
+                    
+                    // Update greeting based on current language
+                    changeLanguage();
+                } catch (error) {
+                    console.error('Error clearing history:', error);
+                }
+            }
+        }
+        
+        // Load chat history on page load
+        window.addEventListener('load', async function() {
+            try {
+                const response = await fetch('/get_chat_history');
+                const data = await response.json();
+                
+                if (data.history && data.history.length > 1) {
+                    // Clear initial greeting
+                    chatContainer.innerHTML = '';
+                    
+                    // Restore chat history
+                    data.history.forEach(item => {
+                        if (item.role === 'user') {
+                            addMessage(item.message, true);
+                        } else if (item.role === 'bot') {
+                            addMessage(item.message, false);
+                            if (item.recommendations) {
+                                item.recommendations.forEach(rec => addRecommendation(rec));
+                            }
+                        }
+                    });
+                }
+            } catch (error) {
+                console.error('Error loading chat history:', error);
+            }
+        });
     </script>
 </body>
 </html>
