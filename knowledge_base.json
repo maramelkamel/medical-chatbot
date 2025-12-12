@@ -1,0 +1,591 @@
+{
+  "symptoms": [
+    {
+      "id": "COLD-001",
+      "condition": "Common Cold",
+      "keywords": ["cold", "runny nose", "sneezing", "congestion", "stuffy nose", "nasal", "sneeze", "mucus"],
+      "description": "A viral infection of the upper respiratory tract that commonly causes a runny nose, sneezing, and congestion. Usually lasts 7-10 days and is self-limiting.",
+      "severity": "Mild",
+      "medicines": [
+        "Decongestants (Pseudoephedrine 30-60mg every 4-6 hours)",
+        "Antihistamines (Loratadine 10mg once daily, Cetirizine 10mg once daily)",
+        "Pain relievers (Acetaminophen 500mg every 6 hours, Ibuprofen 400mg every 8 hours)",
+        "Cough suppressants (Dextromethorphan 10-20mg every 4 hours)",
+        "Vitamin C supplements (1000mg daily)",
+        "Zinc lozenges (within 24 hours of symptom onset)"
+      ],
+      "home_remedies": [
+        "Rest and get adequate sleep (8-10 hours)",
+        "Drink plenty of fluids (water, warm tea, soup)",
+        "Use a humidifier to add moisture to the air",
+        "Gargle with warm salt water",
+        "Steam inhalation for congestion relief"
+      ],
+      "advices": [
+        "Stay hydrated by drinking at least 8-10 glasses of water daily",
+        "Get plenty of rest to help your immune system fight the infection",
+        "Avoid close contact with others to prevent spreading the virus",
+        "Wash hands frequently with soap and water for at least 20 seconds",
+        "Cover your mouth and nose when coughing or sneezing",
+        "Avoid smoking and secondhand smoke",
+        "Use disposable tissues and discard them immediately"
+      ],
+      "when_to_see_doctor": [
+        "Symptoms persist for more than 10 days",
+        "High fever (above 101.3°F/38.5°C) that lasts more than 3 days",
+        "Severe headache or facial pain",
+        "Difficulty breathing or shortness of breath",
+        "Symptoms worsen after initial improvement"
+      ],
+      "prevention": [
+        "Wash hands regularly",
+        "Avoid touching your face",
+        "Stay away from sick individuals",
+        "Boost immune system with proper nutrition",
+        "Get adequate sleep and manage stress"
+      ]
+    },
+    {
+      "id": "HEAD-001",
+      "condition": "Tension Headache",
+      "keywords": ["headache", "head pain", "head ache", "head hurts", "temple pain", "pressure head", "tight band head"],
+      "description": "The most common type of headache characterized by a dull, aching sensation and tightness around the forehead, temples, or back of the head and neck. Often triggered by stress, poor posture, or muscle tension.",
+      "severity": "Mild to Moderate",
+      "medicines": [
+        "Acetaminophen (Tylenol 500-1000mg every 6 hours, max 4000mg/day)",
+        "Ibuprofen (Advil, Motrin 400-600mg every 8 hours)",
+        "Aspirin (325-650mg every 4 hours)",
+        "Naproxen (Aleve 220-440mg every 8-12 hours)",
+        "Combination medications (Excedrin - aspirin, acetaminophen, caffeine)"
+      ],
+      "home_remedies": [
+        "Apply a cold or warm compress to your head or neck",
+        "Practice relaxation techniques (deep breathing, meditation)",
+        "Take a warm bath or shower",
+        "Massage your temples, neck, and shoulders",
+        "Rest in a quiet, dark room"
+      ],
+      "advices": [
+        "Maintain good posture, especially when working at a desk",
+        "Take regular breaks from computer screens (20-20-20 rule)",
+        "Stay hydrated throughout the day",
+        "Manage stress through exercise, yoga, or meditation",
+        "Maintain a regular sleep schedule (7-9 hours per night)",
+        "Avoid skipping meals",
+        "Limit caffeine and alcohol intake",
+        "Consider ergonomic adjustments to your workspace"
+      ],
+      "when_to_see_doctor": [
+        "Sudden, severe headache (thunderclap headache)",
+        "Headache with fever, stiff neck, confusion, or vision changes",
+        "Headache after a head injury",
+        "Chronic headache that worsens over time",
+        "Headache with numbness or weakness",
+        "New headache pattern after age 50"
+      ],
+      "prevention": [
+        "Regular exercise (at least 30 minutes, 3-4 times per week)",
+        "Stress management techniques",
+        "Proper sleep hygiene",
+        "Avoid triggers (certain foods, strong odors, bright lights)",
+        "Stay hydrated"
+      ]
+    },
+    {
+      "id": "FEVER-001",
+      "condition": "Fever",
+      "keywords": ["fever", "high temperature", "hot", "burning up", "feverish", "temperature", "pyrexia", "chills"],
+      "description": "An elevated body temperature above 100.4°F (38°C), often a sign that the body is fighting an infection. Can be accompanied by chills, sweating, headache, and muscle aches.",
+      "severity": "Mild to Moderate (depends on temperature)",
+      "medicines": [
+        "Acetaminophen (Tylenol 500-1000mg every 4-6 hours, not exceeding 4000mg/day)",
+        "Ibuprofen (Advil, Motrin 400-600mg every 6-8 hours)",
+        "Aspirin (for adults only, 325-650mg every 4 hours)",
+        "Naproxen (Aleve 220-440mg every 8-12 hours)"
+      ],
+      "home_remedies": [
+        "Drink plenty of fluids (water, herbal tea, clear broth)",
+        "Rest in a cool, comfortable room",
+        "Wear light, breathable clothing",
+        "Take a lukewarm bath (not cold)",
+        "Use a cool, damp washcloth on forehead",
+        "Eat light, easily digestible foods"
+      ],
+      "advices": [
+        "Monitor temperature regularly (every 4 hours)",
+        "Stay well-hydrated - drink fluids even if not thirsty",
+        "Rest and avoid strenuous activities",
+        "Don't bundle up with extra blankets if feeling hot",
+        "Avoid alcohol and caffeine",
+        "Take medications as directed, don't exceed recommended doses",
+        "Keep track of other symptoms that develop"
+      ],
+      "when_to_see_doctor": [
+        "Temperature above 103°F (39.4°C) in adults",
+        "Fever lasting more than 3 days",
+        "Severe headache, stiff neck, or confusion",
+        "Difficulty breathing or chest pain",
+        "Persistent vomiting or diarrhea",
+        "Rash or unusual skin discoloration",
+        "Seizures or loss of consciousness",
+        "Infants under 3 months with any fever"
+      ],
+      "prevention": [
+        "Maintain good hygiene practices",
+        "Avoid close contact with sick individuals",
+        "Keep vaccinations up to date",
+        "Strengthen immune system with healthy diet",
+        "Get adequate sleep"
+      ]
+    },
+    {
+      "id": "COUGH-001",
+      "condition": "Persistent Cough",
+      "keywords": ["cough", "coughing", "throat irritation", "chest cough", "dry cough", "wet cough", "phlegm", "hacking"],
+      "description": "A reflex action that clears the throat and airways of mucus, irritants, or foreign particles. Can be dry (non-productive) or wet (productive with mucus).",
+      "severity": "Mild to Moderate",
+      "medicines": [
+        "Dextromethorphan (Robitussin DM 10-20mg every 4 hours) - for dry cough",
+        "Guaifenesin (Mucinex 200-400mg every 4 hours) - expectorant for wet cough",
+        "Benzonatate (Tessalon Perles 100-200mg three times daily) - prescription",
+        "Codeine-based cough syrups (prescription only)",
+        "Antihistamines if allergy-related"
+      ],
+      "home_remedies": [
+        "Honey (1-2 tablespoons) with warm water or tea",
+        "Steam inhalation with eucalyptus oil",
+        "Warm salt water gargle",
+        "Ginger tea with honey",
+        "Stay hydrated with warm liquids",
+        "Use a humidifier at night",
+        "Throat lozenges or hard candy",
+        "Elevate head while sleeping"
+      ],
+      "advices": [
+        "Identify and avoid irritants (smoke, dust, strong odors)",
+        "Stay hydrated - drink at least 8 glasses of water daily",
+        "Use a humidifier to keep air moist",
+        "Avoid lying flat - prop up with pillows",
+        "Don't smoke or expose yourself to secondhand smoke",
+        "Avoid very cold or very hot beverages",
+        "Cover mouth when coughing to prevent spreading",
+        "Try to cough gently to avoid throat irritation"
+      ],
+      "when_to_see_doctor": [
+        "Cough lasting more than 3 weeks",
+        "Coughing up blood or pink-tinged mucus",
+        "Difficulty breathing or wheezing",
+        "Chest pain or tightness",
+        "High fever with cough",
+        "Green or yellow mucus with foul odor",
+        "Unintentional weight loss",
+        "Night sweats"
+      ],
+      "prevention": [
+        "Avoid exposure to respiratory irritants",
+        "Quit smoking",
+        "Get flu and pneumonia vaccines",
+        "Practice good hand hygiene",
+        "Avoid allergens if you have allergies"
+      ]
+    },
+    {
+      "id": "THROAT-001",
+      "condition": "Sore Throat (Pharyngitis)",
+      "keywords": ["sore throat", "throat pain", "painful swallowing", "scratchy throat", "throat hurts", "strep throat", "tonsillitis"],
+      "description": "Pain, scratchiness or irritation of the throat that often worsens when you swallow. Can be caused by viral infections, bacterial infections, or environmental factors.",
+      "severity": "Mild to Moderate",
+      "medicines": [
+        "Throat lozenges (Chloraseptic, Cepacol, Halls) - every 2 hours as needed",
+        "Pain relievers (Acetaminophen 500mg every 6 hours, Ibuprofen 400mg every 8 hours)",
+        "Throat spray (Chloraseptic spray, Cepacol spray)",
+        "Antibiotics (if bacterial - requires prescription and doctor's diagnosis)",
+        "Antihistamines if post-nasal drip is the cause"
+      ],
+      "home_remedies": [
+        "Warm salt water gargle (1/2 teaspoon salt in 8oz warm water, 3-4 times daily)",
+        "Honey and lemon in warm water or tea",
+        "Herbal teas (chamomile, peppermint, ginger)",
+        "Ice chips or popsicles to numb the throat",
+        "Chicken soup or warm broth",
+        "Apple cider vinegar gargle (diluted)",
+        "Marshmallow root tea",
+        "Slippery elm lozenges"
+      ],
+      "advices": [
+        "Rest your voice - avoid shouting or talking loudly",
+        "Stay hydrated with warm or cool liquids",
+        "Use a humidifier to keep air moist",
+        "Avoid irritants like smoke, strong chemicals, or polluted air",
+        "Gargle with warm salt water multiple times per day",
+        "Eat soft, easy-to-swallow foods",
+        "Avoid acidic or spicy foods that may irritate throat",
+        "Don't share utensils, cups, or towels",
+        "Get adequate rest to support immune function"
+      ],
+      "when_to_see_doctor": [
+        "Severe throat pain lasting more than 3 days",
+        "Difficulty breathing or swallowing",
+        "High fever (above 101°F/38.3°C)",
+        "White patches or pus on tonsils",
+        "Swollen lymph nodes in neck",
+        "Rash accompanying sore throat",
+        "Joint pain or earache",
+        "Blood in saliva or phlegm",
+        "Hoarse voice lasting more than 2 weeks"
+      ],
+      "prevention": [
+        "Wash hands frequently",
+        "Avoid sharing personal items",
+        "Avoid close contact with people who have throat infections",
+        "Stay hydrated",
+        "Avoid smoking and secondhand smoke"
+      ]
+    },
+    {
+      "id": "STOMACH-001",
+      "condition": "Stomach Ache / Indigestion",
+      "keywords": ["stomach ache", "stomach pain", "abdominal pain", "belly ache", "tummy ache", "nausea", "upset stomach", "indigestion", "dyspepsia"],
+      "description": "Discomfort or pain in the abdominal area, which can be caused by indigestion, gas, overeating, food intolerance, or gastrointestinal conditions.",
+      "severity": "Mild to Moderate",
+      "medicines": [
+        "Antacids (Tums, Rolaids, Maalox) - as directed on package",
+        "Simethicone (Gas-X 125-250mg after meals) for gas and bloating",
+        "Bismuth subsalicylate (Pepto-Bismol) for upset stomach",
+        "H2 blockers (Famotidine 10-20mg, Ranitidine)",
+        "Proton pump inhibitors (Omeprazole 20mg once daily)",
+        "Loperamide (Imodium 2mg after each loose stool) for diarrhea",
+        "Anti-nausea medications (Dramamine, Emetrol)"
+      ],
+      "home_remedies": [
+        "Ginger tea or ginger chews",
+        "Peppermint tea",
+        "Chamomile tea",
+        "BRAT diet (Bananas, Rice, Applesauce, Toast)",
+        "Warm compress on stomach",
+        "Apple cider vinegar in water (1 tbsp in 8oz)",
+        "Fennel seeds",
+        "Baking soda in water (1/2 tsp in 4oz)",
+        "Eat smaller, more frequent meals"
+      ],
+      "advices": [
+        "Eat slowly and chew food thoroughly",
+        "Avoid lying down immediately after eating (wait 2-3 hours)",
+        "Identify and avoid trigger foods (spicy, fatty, acidic foods)",
+        "Stay hydrated with clear fluids",
+        "Avoid carbonated beverages and caffeine",
+        "Don't eat large meals close to bedtime",
+        "Manage stress through relaxation techniques",
+        "Avoid tight-fitting clothing around the waist",
+        "Keep a food diary to identify problem foods",
+        "Eat bland, easily digestible foods during episodes"
+      ],
+      "when_to_see_doctor": [
+        "Severe or persistent abdominal pain",
+        "Blood in stool or vomit",
+        "Unintended weight loss",
+        "Persistent nausea or vomiting",
+        "Yellowing of skin or eyes (jaundice)",
+        "Fever with abdominal pain",
+        "Inability to have bowel movement with vomiting",
+        "Pain that worsens over time",
+        "Abdominal swelling or bloating that doesn't improve"
+      ],
+      "prevention": [
+        "Maintain a balanced, healthy diet",
+        "Eat regular meals at consistent times",
+        "Limit alcohol consumption",
+        "Avoid known trigger foods",
+        "Manage stress levels",
+        "Stay physically active"
+      ]
+    },
+    {
+      "id": "ALLERGY-001",
+      "condition": "Seasonal Allergies (Allergic Rhinitis)",
+      "keywords": ["allergies", "itchy eyes", "watery eyes", "sneezing", "allergy", "hay fever", "allergic", "pollen", "itchy nose"],
+      "description": "An immune system reaction to allergens such as pollen, dust mites, or pet dander, causing symptoms like sneezing, itchy/watery eyes, and nasal congestion.",
+      "severity": "Mild to Moderate",
+      "medicines": [
+        "Antihistamines - Loratadine (Claritin 10mg once daily), Cetirizine (Zyrtec 10mg once daily), Fexofenadine (Allegra 180mg once daily)",
+        "Nasal corticosteroid sprays - Fluticasone (Flonase), Triamcinolone (Nasacort), Budesonide (Rhinocort) - 1-2 sprays per nostril daily",
+        "Decongestants - Pseudoephedrine (Sudafed 30-60mg every 4-6 hours)",
+        "Eye drops - Ketotifen (Zaditor), Olopatadine (Pataday)",
+        "Leukotriene inhibitors - Montelukast (Singulair 10mg daily) - prescription",
+        "Combination medications (Claritin-D, Allegra-D)"
+      ],
+      "home_remedies": [
+        "Saline nasal rinse or neti pot (twice daily)",
+        "Local honey (1 tablespoon daily)",
+        "Steam inhalation",
+        "Cold compress for itchy eyes",
+        "Quercetin supplements",
+        "Butterbur supplements",
+        "Stinging nettle tea",
+        "Keep windows closed during high pollen days"
+      ],
+      "advices": [
+        "Monitor pollen counts and stay indoors when counts are high",
+        "Keep windows closed during allergy season",
+        "Use air conditioning with HEPA filters",
+        "Shower and change clothes after being outdoors",
+        "Wash bedding weekly in hot water",
+        "Use allergen-proof mattress and pillow covers",
+        "Remove shoes at the door to avoid tracking pollen inside",
+        "Vacuum regularly with HEPA filter vacuum",
+        "Avoid hanging laundry outside to dry",
+        "Wear sunglasses outdoors to protect eyes",
+        "Start medications before allergy season begins"
+      ],
+      "when_to_see_doctor": [
+        "Symptoms interfere with daily activities or sleep",
+        "Over-the-counter medications don't provide relief",
+        "Allergy symptoms year-round",
+        "Frequent sinus infections",
+        "Asthma symptoms worsen",
+        "Severe nasal congestion or facial pain",
+        "Consider allergy testing and immunotherapy"
+      ],
+      "prevention": [
+        "Identify and avoid allergen triggers",
+        "Start preventive medications before season begins",
+        "Keep indoor environment clean and allergen-free",
+        "Consider immunotherapy (allergy shots) for severe cases",
+        "Strengthen immune system with healthy lifestyle"
+      ]
+    },
+    {
+      "id": "MUSCLE-001",
+      "condition": "Muscle Pain (Myalgia)",
+      "keywords": ["muscle pain", "sore muscles", "body aches", "muscle ache", "muscle soreness", "myalgia", "stiff muscles", "muscle cramps"],
+      "description": "Pain and soreness in the muscles, commonly caused by overuse, tension, minor injuries, stress, or viral infections. Can affect one muscle or multiple muscle groups.",
+      "severity": "Mild to Moderate",
+      "medicines": [
+        "Ibuprofen (Advil, Motrin 400-600mg every 8 hours)",
+        "Naproxen (Aleve 220-440mg every 8-12 hours)",
+        "Acetaminophen (Tylenol 500-1000mg every 6 hours)",
+        "Topical pain relievers - Bengay, Icy Hot, Biofreeze, Voltaren Gel",
+        "Muscle relaxants - Cyclobenzaprine (Flexeril), Methocarbamol (Robaxin) - prescription",
+        "Magnesium supplements (for cramps)",
+        "CBD topical creams"
+      ],
+      "home_remedies": [
+        "RICE method (Rest, Ice, Compression, Elevation)",
+        "Warm bath with Epsom salts (2 cups in warm water)",
+        "Heating pad or warm compress (after 48 hours)",
+        "Ice pack for acute pain (first 48 hours)",
+        "Gentle stretching exercises",
+        "Massage therapy or self-massage",
+        "Foam rolling",
+        "Essential oils (peppermint, lavender) with carrier oil",
+        "Stay hydrated"
+      ],
+      "advices": [
+        "Rest the affected muscles but avoid complete immobilization",
+        "Apply ice for first 24-72 hours, then switch to heat",
+        "Stay well-hydrated - drink water before, during, and after activity",
+        "Gradually increase intensity of physical activities",
+        "Always warm up before exercise and cool down after",
+        "Stretch regularly to improve flexibility",
+        "Maintain good posture throughout the day",
+        "Get adequate sleep for muscle recovery (7-9 hours)",
+        "Consider protein intake for muscle repair",
+        "Avoid activities that worsen the pain initially"
+      ],
+      "when_to_see_doctor": [
+        "Severe muscle pain without clear cause",
+        "Muscle pain persisting beyond 3 days with home treatment",
+        "Signs of infection (redness, swelling, warmth)",
+        "Muscle weakness or inability to move a body part",
+        "Difficulty breathing or swallowing",
+        "Dark or decreased urine output",
+        "Tick bite before muscle pain started",
+        "Rash with muscle pain",
+        "Fever with muscle aches"
+      ],
+      "prevention": [
+        "Regular stretching and flexibility exercises",
+        "Proper warm-up before physical activity",
+        "Gradual progression in exercise intensity",
+        "Stay hydrated during activities",
+        "Use proper form and technique during exercise",
+        "Allow adequate rest between workouts",
+        "Maintain good posture"
+      ]
+    },
+    {
+      "id": "SLEEP-001",
+      "condition": "Insomnia",
+      "keywords": ["insomnia", "can't sleep", "trouble sleeping", "sleepless", "sleep problems", "difficulty sleeping", "can't fall asleep", "wake up at night"],
+      "description": "Difficulty falling asleep, staying asleep, or getting quality sleep, leading to daytime fatigue, irritability, and difficulty concentrating.",
+      "severity": "Mild to Moderate",
+      "medicines": [
+        "Melatonin supplements (0.5-5mg, 30 minutes before bed)",
+        "Diphenhydramine (Benadryl, Unisom 25-50mg)",
+        "Doxylamine (Unisom SleepTabs 25mg)",
+        "Valerian root supplements (400-900mg)",
+        "Magnesium supplements (200-400mg at bedtime)",
+        "L-theanine (100-200mg)",
+        "Prescription sleep aids (Zolpidem, Eszopiclone) - doctor consultation required"
+      ],
+      "home_remedies": [
+        "Herbal teas - Chamomile, Valerian root, Passionflower, Lavender",
+        "Warm milk with honey",
+        "Tart cherry juice (high in natural melatonin)",
+        "Lavender aromatherapy or essential oil on pillow",
+        "Progressive muscle relaxation",
+        "Deep breathing exercises (4-7-8 technique)",
+        "Meditation or guided imagery",
+        "White noise machine or calming sounds"
+      ],
+      "advices": [
+        "Maintain consistent sleep schedule (same bedtime and wake time daily)",
+        "Create a relaxing bedtime routine (30-60 minutes before sleep)",
+        "Keep bedroom cool (60-67°F/15-19°C), dark, and quiet",
+        "Avoid screens (phone, TV, computer) 1-2 hours before bed",
+        "Limit caffeine after 2 PM",
+        "Avoid large meals, alcohol, and nicotine close to bedtime",
+        "Exercise regularly but not within 3 hours of bedtime",
+        "Use bedroom only for sleep and intimacy",
+        "If can't sleep after 20 minutes, get up and do relaxing activity",
+        "Avoid clock-watching - turn clock away from view",
+        "Limit daytime naps to 20-30 minutes before 3 PM",
+        "Get exposure to natural sunlight during the day"
+      ],
+      "when_to_see_doctor": [
+        "Insomnia lasting more than 3 weeks",
+        "Excessive daytime sleepiness affecting daily activities",
+        "Loud snoring or gasping during sleep (possible sleep apnea)",
+        "Unusual movements or behaviors during sleep",
+        "Chronic pain interfering with sleep",
+        "Mental health concerns (anxiety, depression)",
+        "Medications may be affecting sleep"
+      ],
+      "prevention": [
+        "Practice good sleep hygiene consistently",
+        "Manage stress through relaxation techniques",
+        "Regular exercise routine",
+        "Limit caffeine and alcohol",
+        "Create comfortable sleep environment",
+        "Address underlying health conditions"
+      ]
+    },
+    {
+      "id": "GERD-001",
+      "condition": "Acid Reflux / GERD (Heartburn)",
+      "keywords": ["heartburn", "acid reflux", "burning chest", "indigestion", "gerd", "chest burning", "acid", "regurgitation"],
+      "description": "A burning sensation in the chest or throat caused by stomach acid flowing back into the esophagus. Can worsen when lying down or after eating.",
+      "severity": "Mild to Moderate",
+      "medicines": [
+        "Antacids - Tums, Rolaids, Maalox (as needed, after meals)",
+        "H2 blockers - Famotidine (Pepcid 10-20mg twice daily), Cimetidine (Tagamet)",
+        "Proton pump inhibitors - Omeprazole (Prilosec 20mg once daily), Lansoprazole (Prevacid 15-30mg), Esomeprazole (Nexium 20mg)",
+        "Alginic acid (Gaviscon) - forms protective barrier",
+        "Sodium bicarbonate - quick relief"
+      ],
+      "home_remedies": [
+        "Apple cider vinegar (diluted, 1 tbsp in water before meals)",
+        "Baking soda in water (1/2 tsp in 4oz water)",
+        "Chew sugar-free gum after meals (increases saliva)",
+        "Ginger tea or ginger chews",
+        "Aloe vera juice (1/2 cup before meals)",
+        "Slippery elm tea",
+        "Licorice root (DGL form)",
+        "Eat smaller, more frequent meals"
+      ],
+      "advices": [
+        "Elevate head of bed 6-8 inches (use bed risers, not just pillows)",
+        "Avoid lying down for 2-3 hours after eating",
+        "Eat smaller, more frequent meals instead of large meals",
+        "Avoid trigger foods: spicy, fatty, fried foods, chocolate, caffeine, alcohol, citrus, tomatoes, onions, mint",
+        "Lose weight if overweight (reduces abdominal pressure)",
+        "Wear loose-fitting clothing around waist and stomach",
+        "Don't eat within 3 hours of bedtime",
+        "Sleep on left side (reduces reflux)",
+        "Quit smoking (weakens lower esophageal sphincter)",
+        "Manage stress through relaxation techniques",
+        "Stay upright during and after meals",
+        "Avoid bending over or straining after eating"
+      ],
+      "when_to_see_doctor": [
+        "Heartburn occurring more than twice a week",
+        "Symptoms persist despite lifestyle changes and OTC medications",
+        "Difficulty swallowing or pain when swallowing",
+        "Persistent nausea or vomiting",
+        "Weight loss due to poor appetite or difficulty eating",
+        "Black, tarry stools or vomiting blood",
+        "Chronic cough, hoarseness, or asthma-like symptoms",
+        "Chest pain (rule out heart problems first - call 911 if severe)"
+      ],
+      "prevention": [
+        "Maintain healthy weight",
+        "Avoid trigger foods and beverages",
+        "Eat smaller meals",
+        "Don't lie down after eating",
+        "Quit smoking",
+        "Limit alcohol consumption",
+        "Manage stress"
+      ]
+    },
+    {
+      "id": "ANXIETY-001",
+      "condition": "Anxiety / Stress",
+      "keywords": ["anxiety", "stress", "worried", "anxious", "panic", "nervous", "worry", "tension", "overwhelmed"],
+      "description": "Feelings of worry, nervousness, or unease about an event or situation. Can manifest with physical symptoms like rapid heartbeat, sweating, and difficulty concentrating.",
+      "severity": "Mild to Moderate",
+      "medicines": [
+        "Herbal supplements - Ashwagandha (300-500mg twice daily), Valerian root, Passionflower",
+        "L-theanine (100-200mg as needed)",
+        "Magnesium supplements (200-400mg daily)",
+        "Omega-3 fatty acids (1000-2000mg daily)",
+        "CBD oil (consult dosage guidelines)",
+        "Prescription medications (SSRIs, benzodiazepines) - requires doctor consultation"
+      ],
+      "home_remedies": [
+        "Chamomile tea (2-3 cups daily)",
+        "Lavender essential oil (aromatherapy or topical)",
+        "Green tea (L-theanine content)",
+        "Lemon balm tea",
+        "Regular exercise (30 minutes daily)",
+        "Yoga or tai chi",
+        "Meditation and mindfulness practices",
+        "Deep breathing exercises (box breathing, 4-7-8 technique)",
+        "Progressive muscle relaxation",
+        "Journaling"
+      ],
+      "advices": [
+        "Practice deep breathing exercises daily (5-10 minutes)",
+        "Exercise regularly - at least 30 minutes, 5 days per week",
+        "Maintain regular sleep schedule (7-9 hours per night)",
+        "Limit caffeine and avoid energy drinks",
+        "Avoid alcohol and nicotine",
+        "Eat balanced, nutritious meals at regular times",
+        "Stay connected with supportive friends and family",
+        "Set realistic goals and prioritize tasks",
+        "Take breaks and schedule relaxation time",
+        "Practice mindfulness or meditation (10-20 minutes daily)",
+        "Challenge negative thoughts with positive reframing",
+        "Limit news and social media exposure if it increases anxiety",
+        "Create a calming environment at home",
+        "Use time management techniques to reduce overwhelm"
+      ],
+      "when_to_see_doctor": [
+        "Anxiety interfering with daily activities, work, or relationships",
+        "Panic attacks occurring regularly",
+        "Physical symptoms (chest pain, difficulty breathing)",
+        "Avoiding normal activities due to anxiety",
+        "Thoughts of self-harm",
+        "Anxiety persisting for 6 months or more",
+        "Substance use to cope with anxiety",
+        "Depression accompanying anxiety"
+      ],
+      "prevention": [
+        "Regular physical exercise",
+        "Adequate sleep",
+        "Stress management techniques",
+        "Healthy diet",
+        "Social connections",
+        "Work-life balance",
+        "Regular relaxation practices"
+      ]
+    } ] }

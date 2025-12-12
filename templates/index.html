@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Chatbot</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 600px;
+            width: 100%;
+            padding: 30px;
+        }
+        
+        h1 {
+            color: #667eea;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+        
+        .warning {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 12px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            font-size: 13px;
+            color: #856404;
+        }
+        
+        .chat-container {
+            height: 300px;
+            overflow-y: auto;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+            background: #f9f9f9;
+        }
+        
+        .message {
+            margin-bottom: 15px;
+            padding: 12px;
+            border-radius: 10px;
+            animation: fadeIn 0.3s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .user-message {
+            background: #667eea;
+            color: white;
+            margin-left: 50px;
+            text-align: right;
+        }
+        
+        .bot-message {
+            background: #e8eaf6;
+            color: #333;
+            margin-right: 50px;
+        }
+        
+        .recommendation {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        
+        .recommendation h3 {
+            color: #2e7d32;
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+        
+        .recommendation p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+        
+        .medicine {
+            color: #1565c0;
+            font-weight: bold;
+        }
+        
+        .advice {
+            color: #555;
+            font-style: italic;
+            margin-top: 8px;
+        }
+        
+        .input-container {
+            display: flex;
+            gap: 10px;
+        }
+        
+        #symptomInput {
+            flex: 1;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 25px;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        
+        #symptomInput:focus {
+            border-color: #667eea;
+        }
+        
+        button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        button:hover {
+            background: #5568d3;
+        }
+        
+        button:active {
+            transform: scale(0.98);
+        }
+        
+        .examples {
+            margin-top: 15px;
+            padding: 15px;
+            background: #f5f5f5;
+            border-radius: 10px;
+        }
+        
+        .examples h4 {
+            color: #667eea;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        
+        .examples ul {
+            list-style: none;
+            font-size: 13px;
+            color: #666;
+        }
+        
+        .examples li {
+            padding: 5px 0;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        
+        .examples li:hover {
+            color: #667eea;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏥 Medical Chatbot</h1>
+        <p class="subtitle">Describe your symptoms and get medicine recommendations</p>
+        
+        <div class="warning">
+            ⚠️ <strong>Disclaimer:</strong> This is for informational purposes only. Always consult a healthcare professional for proper medical advice.
+        </div>
+        
+        <div class="chat-container" id="chatContainer">
+            <div class="message bot-message">
+                Hello! I'm your medical assistant. Please describe your symptoms, and I'll recommend appropriate medicine. 
+            </div>
+        </div>
+        
+        <div class="input-container">
+            <input type="text" id="symptomInput" placeholder="e.g., I have fever and headache..." />
+            <button onclick="sendSymptoms()">Send</button>
+        </div>
+        
+        <div class="examples">
+            <h4>Try these examples:</h4>
+            <ul>
+                <li onclick="fillExample('I have a fever and headache')">• Fever and headache</li>
+                <li onclick="fillExample('My throat hurts and I am coughing')">• Sore throat and cough</li>
+                <li onclick="fillExample('I have stomach pain and nausea')">• Stomach pain</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script>
+        const chatContainer = document.getElementById('chatContainer');
+        const symptomInput = document.getElementById('symptomInput');
+        
+        symptomInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                sendSymptoms();
+            }
+        });
+        
+        function fillExample(text) {
+            symptomInput.value = text;
+            symptomInput.focus();
+        }
+        
+        function addMessage(text, isUser) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${isUser ? 'user-message' : 'bot-message'}`;
+            messageDiv.textContent = text;
+            chatContainer.appendChild(messageDiv);
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+        }
+        
+
+
+
+        function addRecommendation(rec) {
+    const recDiv = document.createElement('div');
+    recDiv.className = 'message bot-message';
+
+    recDiv.innerHTML = `
+        <div class="recommendation">
+            <h3>📋 ${rec.condition}</h3>
+
+            <p><strong>ℹ️ Description:</strong> ${rec.description}</p>
+            <p><strong>🔎 Severity:</strong> ${rec.severity}</p>
+
+            <p><strong>💊 Medicines:</strong></p>
+            <ul>${rec.medicines.map(m => `<li>${m}</li>`).join("")}</ul>
+
+            <p><strong>💡 Advice:</strong></p>
+            <ul>${rec.advices.map(a => `<li>${a}</li>`).join("")}</ul>
+
+            <p><strong>🏠 Home Remedies:</strong></p>
+            <ul>${rec.home_remedies.map(h => `<li>${h}</li>`).join("")}</ul>
+
+            <p><strong>🛡️ Prevention:</strong></p>
+            <ul>${rec.prevention.map(p => `<li>${p}</li>`).join("")}</ul>
+
+            <p><strong>⚠️ When to See a Doctor:</strong></p>
+            <ul>${rec.when_to_see_doctor.map(w => `<li>${w}</li>`).join("")}</ul>
+        </div>
+    `;
+
+    chatContainer.appendChild(recDiv);
+    chatContainer.scrollTop = chatContainer.scrollHeight;
+}
+
+        
+
+
+
+
+        async function sendSymptoms() {
+            const symptoms = symptomInput.value.trim();
+            
+            if (!symptoms) {
+                alert('Please describe your symptoms');
+                return;
+            }
+            
+            addMessage(symptoms, true);
+            symptomInput.value = '';
+            
+            try {
+                const response = await fetch('/get_recommendation', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ symptoms: symptoms })
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    if (data.recommendations.length > 0) {
+                        addMessage(`I found ${data.recommendations.length} recommendation(s) for you:`, false);
+                        data.recommendations.forEach(rec => addRecommendation(rec));
+                    }
+                } else {
+                    addMessage(data.message, false);
+                }
+            } catch (error) {
+                addMessage('Sorry, there was an error. Please try again.', false);
+                console.error('Error:', error);
+            }
+        }
+    </script>
+</body>
+</html>
